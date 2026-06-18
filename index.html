@@ -1,0 +1,1303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MeroGhar luxury real estate landing page built with HTML, CSS, and simple JavaScript."
+    />
+    <title>MeroGhar | Luxury Real Estate</title>
+
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="loader" id="loader" aria-label="Loading website">
+      <div class="loader-mark">AE</div>
+      <div class="loader-line"></div>
+    </div>
+
+    <header class="site-header" id="siteHeader">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a class="logo" href="#home" aria-label="MeroGhar home">
+          <span class="logo-mark">MG</span>
+          <span>MeroGhar</span>
+        </a>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a class="nav-link active" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#featured">Properties</a></li>
+          <li><a class="nav-link" href="#services">Services</a></li>
+          <li><a class="nav-link" href="#agents">Agents</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button
+            class="icon-button nav-search"
+            type="button"
+            id="navSearch"
+            aria-label="Search properties"
+          >
+            <i class="fa-solid fa-magnifying-glass icon" aria-hidden="true"></i>
+          </button>
+          <button
+            class="icon-button theme-toggle"
+            type="button"
+            id="themeToggle"
+            aria-label="Switch color theme"
+          >
+            <i class="fa-solid fa-sun icon sun-icon" aria-hidden="true"></i>
+            <i class="fa-solid fa-moon icon moon-icon" aria-hidden="true"></i>
+          </button>
+          <a class="login-button" href="#contact">
+            <i class="fa-solid fa-user icon" aria-hidden="true"></i>
+            Login
+          </a>
+          <button
+            class="icon-button hamburger"
+            type="button"
+            id="hamburger"
+            aria-expanded="false"
+            aria-controls="navMenu"
+            aria-label="Open menu"
+          >
+            <i class="fa-solid fa-bars icon menu-icon" aria-hidden="true"></i>
+            <i class="fa-solid fa-xmark icon close-icon" aria-hidden="true"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-label="Luxury real estate hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-inner container">
+          <div class="hero-content">
+            <div class="eyebrow reveal">
+              Luxury properties with private advisory
+            </div>
+            <h1 class="hero-title reveal">Find Your Dream Home</h1>
+            <p class="hero-description reveal">
+              Discover architect-designed villas, skyline residences, and rare
+              estates in the world's most desirable neighborhoods.
+            </p>
+
+            <div class="hero-actions reveal">
+              <a class="btn btn-primary" href="#featured">
+                Explore Properties
+                <i class="fa-solid fa-arrow-right icon" aria-hidden="true"></i>
+              </a>
+              <a class="btn btn-ghost" href="#contact">Contact Agent</a>
+            </div>
+
+            <form class="hero-search reveal" id="heroSearch">
+              <label class="search-field">
+                <span>Location</span>
+                <input
+                  type="text"
+                  id="heroLocation"
+                  placeholder="City or state"
+                />
+              </label>
+              <label class="search-field">
+                <span>Property Type</span>
+                <select id="heroType">
+                  <option value="">Any type</option>
+                  <option value="villa">Luxury Villa</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="house">Family House</option>
+                  <option value="office">Office Space</option>
+                  <option value="commercial">Commercial</option>
+                  <option value="land">Land</option>
+                </select>
+              </label>
+              <label class="search-field">
+                <span>Price Range</span>
+                <select id="heroPrice">
+                  <option value="">Any price</option>
+                  <option value="0-1500000">10000-1500000</option>
+                  <option value="1500000-3000000">1500000-3000000</option>
+                  <option value="3000000-6000000">3000000-6000000</option>
+                  <option value="6000000-999999999">6000000+</option>
+                </select>
+              </label>
+              <button class="btn btn-search" type="submit">
+                <i
+                  class="fa-solid fa-magnifying-glass icon"
+                  aria-hidden="true"
+                ></i>
+                Search
+              </button>
+            </form>
+
+            <div class="hero-proof reveal">
+              <div class="rating-badge">
+                <span class="stars" aria-label="Five star rating"
+                  >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                >
+                <strong>4.9</strong>
+                <span>client rating</span>
+              </div>
+              <div class="availability-badge">
+                <span class="pulse-dot"></span>
+                42 premium homes available
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="floating-note note-top">
+              <i class="fa-solid fa-key icon" aria-hidden="true"></i>
+              Private tours
+            </div>
+            <article class="hero-property-card">
+              <div class="property-image-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
+                  alt="Modern luxury living room with open kitchen"
+                />
+                <span class="card-badge">Available Now</span>
+              </div>
+              <div class="hero-card-body">
+                <div>
+                  <span class="property-type">Luxury Villa</span>
+                  <h2>Glasshouse Residence</h2>
+                  <p>
+                    <i
+                      class="fa-solid fa-location-dot icon"
+                      aria-hidden="true"
+                    ></i>
+                    Nepal, Kathmandu
+                  </p>
+                </div>
+                <strong class="price">6,850,000</strong>
+                <div class="mini-stats">
+                  <span
+                    ><i class="fa-solid fa-bed icon" aria-hidden="true"></i>5
+                    Beds</span
+                  >
+                  <span
+                    ><i class="fa-solid fa-bath icon" aria-hidden="true"></i>6
+                    Baths</span
+                  >
+                  <span
+                    ><i
+                      class="fa-solid fa-ruler-combined icon"
+                      aria-hidden="true"
+                    ></i
+                    >7,240 sqft</span
+                  >
+                </div>
+              </div>
+            </article>
+            
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section categories-section"
+        aria-labelledby="categoriesTitle"
+      >
+        <div class="container">
+          <div class="section-header reveal">
+            <div>
+              <span class="section-kicker">Browse by lifestyle</span>
+              <h2 id="categoriesTitle">Property Categories</h2>
+            </div>
+          </div>
+
+          <div class="category-grid">
+            <article class="category-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80"
+                alt="Contemporary luxury villa exterior"
+              />
+              <div class="category-content">
+                <span class="category-icon"
+                  ><i class="fa-solid fa-house icon" aria-hidden="true"></i>
+                </span>
+                <h3>Luxury Villa</h3>
+                <p>Private estates with generous outdoor living.</p>
+              </div>
+            </article>
+            <article class="category-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+                alt="Modern apartment interior"
+              />
+              <div class="category-content">
+                <span class="category-icon"
+                  ><i class="fa-solid fa-building icon" aria-hidden="true"></i>
+                </span>
+                <h3>Apartment</h3>
+                <p>Elegant city homes with effortless access.</p>
+              </div>
+            </article>
+            <article class="category-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=900&q=80"
+                alt="Family house with welcoming front lawn"
+              />
+              <div class="category-content">
+                <span class="category-icon"
+                  ><i class="fa-solid fa-key icon" aria-hidden="true"></i>
+                </span>
+                <h3>Family House</h3>
+                <p>Warm, functional homes in prime school zones.</p>
+              </div>
+            </article>
+            <article class="category-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
+                alt="Premium office lounge"
+              />
+              <div class="category-content">
+                <span class="category-icon"
+                  ><i class="fa-solid fa-building icon" aria-hidden="true"></i>
+                </span>
+                <h3>Office Space</h3>
+                <p>Polished workspaces for growing teams.</p>
+              </div>
+            </article>
+            <article class="category-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80"
+                alt="Commercial building exterior"
+              />
+              <div class="category-content">
+                <span class="category-icon"
+                  ><i
+                    class="fa-solid fa-ruler-combined icon"
+                    aria-hidden="true"
+                  ></i>
+                </span>
+                <h3>Commercial Building</h3>
+                <p>Income-focused assets in strategic corridors.</p>
+              </div>
+            </article>
+            <article class="category-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80"
+                alt="Open land with green fields"
+              />
+              <div class="category-content">
+                <span class="category-icon">
+                  <i
+                    class="fa-solid fa-location-dot icon"
+                    aria-hidden="true"
+                  ></i>
+                </span>
+                <h3>Land</h3>
+                <p>Rare parcels for custom residences and estates.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section featured-section"
+        id="featured"
+        aria-labelledby="featuredTitle"
+      >
+        <div class="container">
+          <div class="section-header reveal">
+            <div>
+              <span class="section-kicker">Signature collection</span>
+              <h2 id="featuredTitle">Featured Properties</h2>
+            </div>
+          </div>
+
+          <div class="filter-panel reveal" aria-label="Property filters">
+            <label class="filter-field filter-wide">
+              <span>Search</span>
+              <input
+                type="search"
+                id="filterSearch"
+                placeholder="Search property or city"
+              />
+            </label>
+            <label class="filter-field">
+              <span>Category</span>
+              <select id="filterCategory">
+                <option value="">All categories</option>
+                <option value="villa">Luxury Villa</option>
+                <option value="apartment">Apartment</option>
+                <option value="house">Family House</option>
+                <option value="office">Office Space</option>
+                <option value="commercial">Commercial</option>
+                <option value="land">Land</option>
+              </select>
+            </label>
+            <label class="filter-field">
+              <span>Price</span>
+              <select id="filterPrice">
+                <option value="">Any price</option>
+                <option value="0-1500000">0-1500000</option>
+                <option value="1500000-3000000">1500000-3000000</option>
+                <option value="3000000-6000000">3000000-6000000</option>
+                <option value="6000000-999999999">6000000+</option>
+              </select>
+            </label>
+            <label class="filter-field">
+              <span>Location</span>
+              <select id="filterLocation">
+                <option value="">Any location</option>
+                <option value="kathmandu">Kathmandu</option>
+                <option value="pokhara">Pokhara</option>
+                <option value="kohalpur">Kohalpur</option>
+                <option value="surkhet">Surkhet</option>
+                <option value="nepalgunj">Nepalgunj</option>
+                <option value="kirtipur">Kirtipur</option>
+              </select>
+            </label>
+            <label class="filter-field">
+              <span>Bedrooms</span>
+              <select id="filterBedrooms">
+                <option value="">Any beds</option>
+                <option value="2">2+ beds</option>
+                <option value="3">3+ beds</option>
+                <option value="4">4+ beds</option>
+                <option value="5">5+ beds</option>
+              </select>
+            </label>
+            <button class="btn btn-reset" type="button" id="resetFilters">
+              Reset
+            </button>
+          </div>
+
+          <div class="property-grid" id="propertyGrid">
+            <article
+              class="property-card reveal"
+              data-category="villa"
+              data-price="6850000"
+              data-location="kathmandu"
+              data-bedrooms="5"
+              data-search="oceanview glass villa malibu kathmandu luxury villa coastline"
+            >
+              <div class="property-media">
+                <img
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1100&q=80"
+                  alt="Luxury glass villa exterior"
+                />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Save Himalayan Glass Villa"
+                  aria-pressed="false"
+                >
+                  <i class="fa-solid fa-heart icon" aria-hidden="true"></i>
+                </button>
+                <span class="property-tag">Luxury Villa</span>
+              </div>
+              <div class="property-body">
+                <div class="property-topline">
+                  <strong>6,850,000</strong>
+                  <span>For Sale</span>
+                </div>
+                <h3>Himalayan Glass Villa</h3>
+                <p class="property-location">
+                  <i
+                    class="fa-solid fa-location-dot icon"
+                    aria-hidden="true"
+                  ></i
+                  >Nepal, Kathmandu
+                </p>
+                <div class="property-specs">
+                  <span
+                    ><i class="fa-solid fa-bed icon" aria-hidden="true"></i>5
+                    Beds</span
+                  >
+                  <span
+                    ><i class="fa-solid fa-bath icon" aria-hidden="true"></i>6
+                    Baths</span
+                  >
+                  <span
+                    ><i
+                      class="fa-solid fa-ruler-combined icon"
+                      aria-hidden="true"
+                    ></i
+                    >7,240 sqft</span
+                  >
+                </div>
+                <a class="details-link" href="#contact">View Details</a>
+              </div>
+            </article>
+
+            <article
+              class="property-card reveal"
+              data-category="apartment"
+              data-price="4200000"
+              data-location="surkhet"
+              data-bedrooms="3"
+              data-search="skyline penthouse manhattan surkhet apartment city skyline"
+            >
+              <div class="property-media">
+                <img
+                  src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=80"
+                  alt="Bright modern luxury apartment interior"
+                />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Lakeside Luxury Villa"
+                  aria-pressed="false"
+                >
+                  <i class="fa-solid fa-heart icon" aria-hidden="true"></i>
+                </button>
+                <span class="property-tag">Apartment</span>
+              </div>
+              <div class="property-body">
+                <div class="property-topline">
+                  <strong>4,200,000</strong>
+                  <span>For Sale</span>
+                </div>
+                <h3>Lakeside Luxury Villa</h3>
+                <p class="property-location">
+                  <i
+                    class="fa-solid fa-location-dot icon"
+                    aria-hidden="true"
+                  ></i
+                  >Nepal, Kirtipur
+                </p>
+                <div class="property-specs">
+                  <span
+                    ><i class="fa-solid fa-bed icon" aria-hidden="true"></i>3
+                    Beds</span
+                  >
+                  <span
+                    ><i class="fa-solid fa-bath icon" aria-hidden="true"></i>3
+                    Baths</span
+                  >
+                  <span
+                    ><i
+                      class="fa-solid fa-ruler-combined icon"
+                      aria-hidden="true"
+                    ></i
+                    >3,950 sqft</span
+                  >
+                </div>
+                <a class="details-link" href="#contact">View Details</a>
+              </div>
+            </article>
+
+            <article
+              class="property-card reveal"
+              data-category="house"
+              data-price="1850000"
+              data-location="kohalpur"
+              data-bedrooms="4"
+              data-search="willow family estate austin kohalpur family house garden"
+            >
+              <div class="property-media">
+                <img
+                  src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1100&q=80"
+                  alt="Family estate exterior with front lawn"
+                />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Save Valley Heights Residence"
+                  aria-pressed="false"
+                >
+                  <i class="fa-solid fa-heart icon" aria-hidden="true"></i>
+                </button>
+                <span class="property-tag">Family House</span>
+              </div>
+              <div class="property-body">
+                <div class="property-topline">
+                  <strong>1,850,000</strong>
+                  <span>For Sale</span>
+                </div>
+                <h3>Valley Heights Residence</h3>
+                <p class="property-location">
+                  <i
+                    class="fa-solid fa-location-dot icon"
+                    aria-hidden="true"
+                  ></i
+                  >Nepal, Kohalpur
+                </p>
+                <div class="property-specs">
+                  <span
+                    ><i class="fa-solid fa-bed icon" aria-hidden="true"></i>4
+                    Beds</span
+                  >
+                  <span
+                    ><i class="fa-solid fa-bath icon" aria-hidden="true"></i>4
+                    Baths</span
+                  >
+                  <span
+                    ><i
+                      class="fa-solid fa-ruler-combined icon"
+                      aria-hidden="true"
+                    ></i
+                    >4,860 sqft</span
+                  >
+                </div>
+                <a class="details-link" href="#contact">View Details</a>
+              </div>
+            </article>
+
+            <article
+              class="property-card reveal"
+              data-category="office"
+              data-price="2850000"
+              data-location="nepalgunj"
+              data-bedrooms="2"
+              data-search="Skyline Office Hub  nepalgunj office space commercial"
+            >
+              <div class="property-media">
+                <img
+                  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1100&q=80"
+                  alt="Modern executive office interior"
+                />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Save Skyline Office Hub"
+                  aria-pressed="false"
+                >
+                  <i class="fa-solid fa-heart icon" aria-hidden="true"></i>
+                </button>
+                <span class="property-tag">Office Space</span>
+              </div>
+              <div class="property-body">
+                <div class="property-topline">
+                  <strong>2,850,000</strong>
+                  <span>For Lease</span>
+                </div>
+                <h3>Skyline Office Hub</h3>
+                <p class="property-location">
+                  <i
+                    class="fa-solid fa-location-dot icon"
+                    aria-hidden="true"
+                  ></i
+                  >Nepal, Nepalgunj
+                </p>
+                <div class="property-specs">
+                  <span
+                    ><i class="fa-solid fa-bed icon" aria-hidden="true"></i>2
+                    Suites</span
+                  >
+                  <span
+                    ><i class="fa-solid fa-bath icon" aria-hidden="true"></i>4
+                    Baths</span
+                  >
+                  <span
+                    ><i
+                      class="fa-solid fa-ruler-combined icon"
+                      aria-hidden="true"
+                    ></i
+                    >8,100 sqft</span
+                  >
+                </div>
+                <a class="details-link" href="#contact">View Details</a>
+              </div>
+            </article>
+
+            <article
+              class="property-card reveal"
+              data-category="commercial"
+              data-price="5200000"
+              data-location="pokhara"
+              data-bedrooms="2"
+              data-search="Valley Trade Plaza seattle nepalgunj commercial building investment"
+            >
+              <div class="property-media">
+                <img
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1100&q=80"
+                  alt="Commercial tower building exterior"
+                />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Save Valley Trade Plaza"
+                  aria-pressed="false"
+                >
+                  <i class="fa-solid fa-heart icon" aria-hidden="true"></i>
+                </button>
+                <span class="property-tag">Commercial</span>
+              </div>
+              <div class="property-body">
+                <div class="property-topline">
+                  <strong>5,200,000</strong>
+                  <span>For Sale</span>
+                </div>
+                <h3>Valley Trade Plaza</h3>
+                <p class="property-location">
+                  <i
+                    class="fa-solid fa-location-dot icon"
+                    aria-hidden="true"
+                  ></i
+                  >Nepal, Pokhara
+                </p>
+                <div class="property-specs">
+                  <span
+                    ><i class="fa-solid fa-bed icon" aria-hidden="true"></i>2
+                    Units</span
+                  >
+                  <span
+                    ><i class="fa-solid fa-bath icon" aria-hidden="true"></i>6
+                    Baths</span
+                  >
+                  <span
+                    ><i
+                      class="fa-solid fa-ruler-combined icon"
+                      aria-hidden="true"
+                    ></i
+                    >12,400 sqft</span
+                  >
+                </div>
+                <a class="details-link" href="#contact">View Details</a>
+              </div>
+            </article>
+
+            <article
+              class="property-card reveal"
+              data-category="land"
+              data-price="925000"
+              data-location="Kirtipur"
+              data-bedrooms="0"
+              data-search="Apex Corporate Center kirtipur custom estate parcel"
+            >
+              <div class="property-media">
+                <img
+                  src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1100&q=80"
+                  alt="Open green land parcel"
+                />
+                <button
+                  class="favorite-button"
+                  type="button"
+                  aria-label="Save Apex Corporate Center"
+                  aria-pressed="false"
+                >
+                  <i class="fa-solid fa-heart icon" aria-hidden="true"></i>
+                </button>
+                <span class="property-tag">Land</span>
+              </div>
+              <div class="property-body">
+                <div class="property-topline">
+                  <strong>925,000</strong>
+                  <span>For Sale</span>
+                </div>
+                <h3>Apex Corporate Center</h3>
+                <p class="property-location">
+                  <i
+                    class="fa-solid fa-location-dot icon"
+                    aria-hidden="true"
+                  ></i>
+                  Nepal, Kirtipur
+                </p>
+                <div class="property-specs">
+                  <span
+                    ><i class="fa-solid fa-bed icon" aria-hidden="true"></i>0
+                    Beds</span
+                  >
+                  <span
+                    ><i class="fa-solid fa-bath icon" aria-hidden="true"></i>0
+                    Baths</span
+                  >
+                  <span
+                    ><i
+                      class="fa-solid fa-ruler-combined icon"
+                      aria-hidden="true"
+                    ></i
+                    >2.8 acres</span
+                  >
+                </div>
+                <a class="details-link" href="#contact">View Details</a>
+              </div>
+            </article>
+          </div>
+
+          <p class="no-results" id="noResults" aria-live="polite">
+            No matching residences available. Adjust the filters to see more
+            properties.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="section why-section"
+        id="services"
+        aria-labelledby="servicesTitle"
+      >
+        <div class="container">
+          <div class="section-header reveal">
+            <div>
+              <span class="section-kicker">Why choose us</span>
+              <h2 id="servicesTitle">A Smoother Way To Move</h2>
+            </div>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card reveal">
+              <span class="feature-icon"
+                ><i
+                  class="fa-solid fa-shield-halved icon"
+                  aria-hidden="true"
+                ></i>
+              </span>
+              <h3>Verified Properties</h3>
+              <p>
+                Documentation, ownership, amenities, and condition are checked
+                before a property reaches you.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-icon"
+                ><i class="fa-solid fa-user icon" aria-hidden="true"></i>
+              </span>
+              <h3>Trusted Agents</h3>
+              <p>
+                Experienced advisors manage private tours, buyer questions, and
+                offer strategy with discretion.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-icon"
+                ><i
+                  class="fa-solid fa-location-dot icon"
+                  aria-hidden="true"
+                ></i>
+              </span>
+              <h3>Best Locations</h3>
+              <p>
+                Neighborhood intelligence helps you compare privacy, commute,
+                schools, and long-term value.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-icon"
+                ><i class="fa-solid fa-key icon" aria-hidden="true"></i>
+              </span>
+              <h3>Secure Process</h3>
+              <p>
+                Clear milestones, private data handling, and guided paperwork
+                keep every transaction organized.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-icon"
+                ><i class="fa-solid fa-headset icon" aria-hidden="true"></i>
+              </span>
+              <h3>24/7 Support</h3>
+              <p>
+                Dedicated coordinators keep communication moving across time
+                zones and fast decision cycles.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery-section" aria-labelledby="galleryTitle">
+        <div class="container">
+          <div class="section-header reveal">
+            <div>
+              <span class="section-kicker">Visual tour</span>
+              <h2 id="galleryTitle">Property Gallery</h2>
+            </div>
+            <p>
+              Luxury interiors, dramatic exteriors, and calm private spaces
+              selected for inspection-level browsing.
+            </p>
+          </div>
+
+          <div class="gallery-grid">
+            <button
+              class="gallery-item gallery-feature reveal"
+              type="button"
+              data-caption="Oceanfront glass villa exterior"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=85"
+                alt="Oceanfront glass villa exterior"
+              />
+              <span class="gallery-label">Exterior</span>
+              <span class="gallery-content">
+                <span>Signature Estate</span>
+                <strong>Oceanfront Glass Villa</strong>
+              </span>
+              <span class="gallery-action" aria-hidden="true">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </button>
+
+            <button
+              class="gallery-item gallery-tall reveal"
+              type="button"
+              data-caption="Minimal luxury dining room"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=900&q=85"
+                alt="Minimal luxury dining room"
+              />
+              <span class="gallery-label">Dining</span>
+              <span class="gallery-content">
+                <span>Private Entertaining</span>
+                <strong>Minimal Dining Room</strong>
+              </span>
+              <span class="gallery-action" aria-hidden="true">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </button>
+
+            <button
+              class="gallery-item reveal"
+              type="button"
+              data-caption="Warm contemporary living room"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85"
+                alt="Warm contemporary living room"
+              />
+              <span class="gallery-label">Living</span>
+              <span class="gallery-content">
+                <span>Open Plan</span>
+                <strong>Contemporary Lounge</strong>
+              </span>
+              <span class="gallery-action" aria-hidden="true">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </button>
+
+            <button
+              class="gallery-item reveal"
+              type="button"
+              data-caption="Private bedroom suite"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&fit=crop&w=900&q=85"
+                alt="Private bedroom suite"
+              />
+              <span class="gallery-label">Suite</span>
+              <span class="gallery-content">
+                <span>Quiet Retreat</span>
+                <strong>Primary Bedroom</strong>
+              </span>
+              <span class="gallery-action" aria-hidden="true">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </button>
+
+            <button
+              class="gallery-item gallery-wide reveal"
+              type="button"
+              data-caption="Open plan kitchen and lounge"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
+                alt="Open plan kitchen and lounge"
+              />
+              <span class="gallery-label">Kitchen</span>
+              <span class="gallery-content">
+                <span>Chef Ready</span>
+                <strong>Kitchen And Lounge</strong>
+              </span>
+              <span class="gallery-action" aria-hidden="true">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </button>
+
+            <button
+              class="gallery-item reveal"
+              type="button"
+              data-caption="Quiet reading lounge"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=85"
+                alt="Quiet reading lounge"
+              />
+              <span class="gallery-label">Lounge</span>
+              <span class="gallery-content">
+                <span>Evening Calm</span>
+                <strong>Reading Lounge</strong>
+              </span>
+              <span class="gallery-action" aria-hidden="true">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section agents-section"
+        id="agents"
+        aria-labelledby="agentsTitle"
+      >
+        <div class="container">
+          <div class="section-header reveal">
+            <div>
+              <span class="section-kicker">Private advisors</span>
+              <h2 id="agentsTitle">Meet Our Agents</h2>
+            </div>
+          </div>
+
+          <div class="agent-grid">
+            <article class="agent-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=80"
+                alt="Portrait of John Doe"
+              />
+              <div class="agent-body">
+                <h3>John Doe</h3>
+                <p>12 years experience</p>
+                <div class="agent-rating">
+                  <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                  >4.9
+                </div>
+                <a class="details-link" href="#contact">Contact</a>
+              </div>
+            </article>
+            <article class="agent-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=700&q=80"
+                alt="Portrait of John Doe"
+              />
+              <div class="agent-body">
+                <h3>John Doe</h3>
+                <p>12 years experience</p>
+                <div class="agent-rating">
+                  <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                  >5.0
+                </div>
+                <a class="details-link" href="#contact">Contact</a>
+              </div>
+            </article>
+            <article class="agent-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80"
+                alt="Portrait of Elena "
+              />
+              <div class="agent-body">
+                <h3>Elena</h3>
+                <p>10 years experience</p>
+                <div class="agent-rating">
+                  <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                  >4.8
+                </div>
+                <a class="details-link" href="#contact">Contact</a>
+              </div>
+            </article>
+            <article class="agent-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80"
+                alt="Portrait of John Doe"
+              />
+              <div class="agent-body">
+                <h3>John Doe</h3>
+                <p>9 years experience</p>
+                <div class="agent-rating">
+                  <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                  >4.9
+                </div>
+                <a class="details-link" href="#contact">Contact</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-section" id="about" aria-labelledby="statsTitle">
+        <div class="container stats-inner">
+          <div class="stats-copy reveal">
+            <span class="section-kicker">Built on results</span>
+            <h2 id="statsTitle">Trusted By Buyers, Sellers, And Investors</h2>
+            <p>
+              Our team combines market analytics with calm, personal guidance so
+              every client can move with confidence.
+            </p>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card reveal">
+              <strong class="counter" data-target="1260" data-suffix="+"
+                >0</strong
+              >
+              <span>Properties Listed</span>
+            </div>
+            <div class="stat-card reveal">
+              <strong class="counter" data-target="980" data-suffix="+"
+                >0</strong
+              >
+              <span>Happy Clients</span>
+            </div>
+            <div class="stat-card reveal">
+              <strong class="counter" data-target="84" data-suffix="+"
+                >0</strong
+              >
+              <span>Expert Agents</span>
+            </div>
+            <div class="stat-card reveal">
+              <strong class="counter" data-target="18" data-suffix="+"
+                >0</strong
+              >
+              <span>Years Experience</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section testimonials-section"
+        aria-labelledby="testimonialsTitle"
+      >
+        <div class="container">
+          <div class="section-header reveal">
+            <div>
+              <span class="section-kicker">Client voices</span>
+              <h2 id="testimonialsTitle">Testimonials</h2>
+            </div>
+            <div
+              class="slider-controls"
+              aria-label="Testimonial slider controls"
+            >
+              <button
+                class="icon-button"
+                type="button"
+                id="prevTestimonial"
+                aria-label="Previous testimonial"
+              >
+                <i class="fa-solid fa-arrow-right icon" aria-hidden="true"></i>
+              </button>
+              <button
+                class="icon-button"
+                type="button"
+                id="nextTestimonial"
+                aria-label="Next testimonial"
+              >
+                <i class="fa-solid fa-arrow-right icon" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="testimonial-slider reveal">
+            <div class="testimonial-track" id="testimonialTrack">
+              <article class="testimonial-card">
+                <div class="review-stars">
+                  &#9733;&#9733;&#9733;&#9733;&#9733;
+                </div>
+                <p>
+                  "John Doe made our cross-country purchase feel measured and
+                  clear. Every property they showed us matched our priorities."
+                </p>
+                <div class="client">
+                  <img
+                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
+                    alt="Portrait of client John Doe"
+                  />
+                  <div>
+                    <strong>John Doe</strong>
+                    <span>Purchased in Malibu</span>
+                  </div>
+                </div>
+              </article>
+              <article class="testimonial-card">
+                <div class="review-stars">
+                  &#9733;&#9733;&#9733;&#9733;&#9733;
+                </div>
+                <p>
+                  "The team understood privacy, timing, and negotiation. We sold
+                  above expectation without the process becoming stressful."
+                </p>
+                <div class="client">
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
+                    alt="Portrait of client John Doe"
+                  />
+                  <div>
+                    <strong>John Doe</strong>
+                    <span>Seller in Manhattan</span>
+                  </div>
+                </div>
+              </article>
+              <article class="testimonial-card">
+                <div class="review-stars">
+                  &#9733;&#9733;&#9733;&#9733;&#9733;
+                </div>
+                <p>
+                  "Their property analysis was sharp, but the service still felt
+                  personal. We found a portfolio asset in three weeks."
+                </p>
+                <div class="client">
+                  <img
+                    src="https://images.unsplash.com/photo-1573496358961-3c82861ab8f4?auto=format&fit=crop&w=200&q=80"
+                    alt="Portrait of client John Doe"
+                  />
+                  <div>
+                    <strong>John Doe</strong>
+                    <span>Investor in Seattle</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div
+              class="slider-dots"
+              id="testimonialDots"
+              aria-label="Testimonial slides"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section contact-section"
+        id="contact"
+        aria-labelledby="contactTitle"
+      >
+        <div class="container contact-grid">
+          <div class="contact-copy reveal">
+            <span class="section-kicker">Start the conversation</span>
+            <h2 id="contactTitle">Contact A Luxury Property Advisor</h2>
+            <p>
+              Tell us what you are looking for and an advisor will prepare a
+              refined shortlist for your timeline, budget, and lifestyle.
+            </p>
+
+            <div class="contact-list">
+              <p>
+                <i class="fa-solid fa-location-dot icon" aria-hidden="true"></i>
+                Luxury Apartment, Kathmandu, Nepal
+              </p>
+              <p>
+                <i class="fa-solid fa-phone icon" aria-hidden="true"></i
+                >9876543210
+              </p>
+              <p>
+                <i class="fa-solid fa-envelope icon" aria-hidden="true"></i>
+                info@meroghar.com
+              </p>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm">
+            <label>
+              <span>Name</span>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your full name"
+                required
+              />
+            </label>
+            <label>
+              <span>Email</span>
+              <input
+                type="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Share your preferred location, budget, and timeline"
+                required
+              ></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+            <p class="form-message" id="formMessage" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="#home">
+            <span class="logo-mark">MG</span>
+            <span>MeroGhar</span>
+          </a>
+          <p>
+            Luxury real estate advisory for rare homes, premium investments, and
+            private relocation.
+          </p>
+          <div class="social-links" aria-label="Social links">
+            <a href="#" aria-label="Instagram">Ig</a>
+            <a href="#" aria-label="LinkedIn">In</a>
+            <a href="#" aria-label="Facebook">Fb</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Company</h3>
+          <a href="#services">Services</a>
+          <a href="#agents">Agents</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Properties</h3>
+          <a href="#featured">Luxury Villas</a>
+          <a href="#featured">Apartments</a>
+          <a href="#featured">Office Space</a>
+          <a href="#featured">Land</a>
+        </div>
+
+        <form class="newsletter" id="newsletterForm">
+          <h3>Newsletter</h3>
+          <p>Receive private listing previews and market notes.</p>
+          <label>
+            <span>Email address</span>
+            <input type="email" placeholder="Email address" required />
+          </label>
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+          <p class="form-message" id="newsletterMessage" aria-live="polite"></p>
+        </form>
+      </div>
+      <div class="container footer-bottom">
+        <span
+          >&copy; <span id="currentYear"></span> MeroGhar. All rights
+          reserved.</span
+        >
+        <span>Privacy Policy</span>
+      </div>
+    </footer>
+
+    <div
+      class="lightbox"
+      id="lightbox"
+      aria-hidden="true"
+      role="dialog"
+      aria-label="Property gallery image"
+    >
+      <button
+        class="icon-button lightbox-close"
+        type="button"
+        id="lightboxClose"
+        aria-label="Close image preview"
+      >
+        <i class="fa-solid fa-xmark icon" aria-hidden="true"></i>
+      </button>
+      <figure>
+        <img src="" alt="" id="lightboxImage" />
+        <figcaption id="lightboxCaption"></figcaption>
+      </figure>
+    </div>
+
+    <button
+      class="back-to-top"
+      type="button"
+      id="backToTop"
+      aria-label="Back to top"
+    >
+      <i class="fa-solid fa-arrow-up icon" aria-hidden="true"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
