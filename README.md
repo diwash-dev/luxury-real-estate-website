@@ -23,5 +23,3 @@ This project features a clean luxury design, property showcase sections, smooth 
 - CSS3
 - JavaScript
 - Responsive Web Design
-
-## 📂 Project Structure
